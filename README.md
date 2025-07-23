@@ -1,100 +1,128 @@
-#Assignment 1 - Create a simple REST API Webserver
+# Assignment 1 - Simple REST API Webserver
 
-This is a REST API built using python and flask.
-It performs basic CRUD Operations on an in-memory list of students.
+This project is a RESTful API built using **Python** and **Flask**. It performs basic **CRUD operations** on an in-memory list of students.
 
-C = Create
-R = READ
-U = UPDATE
-D = DELETE
+> **C** = Create   |   **R** = Read   |   **U** = Update   |   **D** = Delete
 
-# Fetures
+---
 
-- **GET /Students - Fetches all the students
-- **POST /students/<id> - Adds a new student
-- **PUT /students/<id>** - Update a student by id
-- **DELETE /student/<id>** - Deletes a student by id
-- **GET /api/v1/healthcheck** - Checks if the server is running/active or not.
+## ✨ Features
 
-# Setup Instructions
+- **GET** `/students` - Fetch all students  
+- **POST** `/students` - Add a new student  
+- **PUT** `/students/<id>` - Update a student by ID  
+- **DELETE** `/students/<id>` - Delete a student by ID  
+- **GET** `/api/v1/healthcheck` - Check if the server is running  
 
-Step 1 - 
+---
 
-Clone the repository
+## ⚙️ Setup Instructions
 
+### Step 1 - Clone the Repository
 
-'''' bash
-
+```bash
 git clone https://github.com/chetanboradeone2n/rest_api_webserver.git
-
 cd rest_api_webserver
+```
 
+### Step 2 - Create and Activate Virtual Environment
 
-Step 2 - 
-
-Create an active virtual environment 
-
+```bash
 python3 -m venv venv
-source venv/bin/activate 
+source venv/bin/activate
+```
 
-Step 3 - 
+### Step 3 - Install Dependencies
 
-Install Requirements 
+```bash
+pip install -r requirements.txt
+```
 
-pip install -r requirements.txt 
+### Step 4 - Run the Application
 
-
-Step 4 - 
-
-Run the application 
-
+```bash
 python3 app.py
+```
 
-# The server will start 127.0.0.1:5000
+> The server will start at: `http://127.0.0.1:5000`
 
+---
 
-# Example Requests
+## 🧪 Example API Requests
 
-1. Healthcheck - 
+### ✅ Healthcheck
 
+```http
 GET /api/v1/healthcheck
-Response: {"status": "ok"}
+```
 
-2. Add a Student - 
+**Response:**
 
+```json
+{
+  "status": "ok"
+}
+```
+
+---
+
+### ➕ Add a Student
+
+```http
 POST /students
-Body:
+```
+
+**Body:**
+
+```json
 {
   "name": "John",
   "email": "john@example.com",
   "age": 21
 }
+```
 
+---
 
-3. Update Student - 
+### ✏️ Update a Student
 
+```http
 PUT /students/1
-Body:
+```
+
+**Body:**
+
+```json
 {
   "name": "Johnny",
   "email": "johnny@example.com",
   "age": 22
 }
+```
 
+---
 
-4. Delete Student - 
+### ❌ Delete a Student
 
+```http
 DELETE /students/1
+```
 
+---
 
-# Project Structure 
+## 📁 Project Structure
 
-student-api/
+```
+rest_api_webserver/
 ├── app.py
 ├── requirements.txt
 └── README.md
+```
 
+---
 
-# Author -
-  Chetan Borade
-  Github - @chetanboradeone2n
+## 👤 Author
+
+**Chetan Borade**  
+GitHub: [@chetanboradeone2n](https://github.com/chetanboradeone2n)
+
